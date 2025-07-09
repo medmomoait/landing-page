@@ -1,20 +1,20 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Invoice API</title>
   <style>
     body {
       font-family: Arial, sans-serif;
       margin: 0; padding: 0;
-      background: #f6f8fa;
+      background: #f8f9fa;
       color: #333;
     }
     header {
-      background: #333;
+      background: #1a1a1a;
       color: white;
-      padding: 1.5rem;
+      padding: 2rem;
       text-align: center;
     }
     main {
@@ -23,7 +23,7 @@
       margin: auto;
     }
     h1, h2 {
-      color: #111;
+      color: #222;
     }
     .btn {
       background-color: #0d6efd;
@@ -32,45 +32,55 @@
       text-decoration: none;
       border-radius: 8px;
       display: inline-block;
-      margin: 1rem 0;
+      margin: 1.5rem 0;
+      font-size: 1rem;
+    }
+    .btn:hover {
+      background-color: #0b5ed7;
     }
     .code-block {
-      background: #eee;
+      background: #e9ecef;
       padding: 1rem;
       border-radius: 5px;
       font-family: monospace;
       white-space: pre-wrap;
+      overflow-x: auto;
     }
     footer {
       text-align: center;
       padding: 2rem;
       background: #222;
       color: white;
-      margin-top: 3rem;
+      margin-top: 4rem;
+    }
+    a {
+      color: #4da8ff;
     }
   </style>
 </head>
 <body>
 
 <header>
-  <h1>📄 Invoice API</h1>
-  <p>Create downloadable PDF invoices via a simple API</p>
+  <h1>📄 Invoice PDF API</h1>
+  <p>Create and download beautiful PDF invoices via a simple API</p>
 </header>
 
 <main>
-  <h2>💰 Get Started for Just $1</h2>
-  <p>Click the button below to pay $1 and receive your personal API key to generate unlimited invoices.</p>
+  <h2>💳 Get Access for Just $1</h2>
+  <p>Pay once and receive your own private API key to generate invoices instantly.</p>
 
-  <a class="btn" href="https://invoice-api-3.onrender.com/create-checkout-session">Pay $1 and Get API Key</a>
+  <a class="btn" href="https://invoice-api-3.onrender.com/create-checkout-session">
+    Pay $1 and Get API Key
+  </a>
 
-  <h2>📦 How It Works</h2>
+  <h2>⚙️ How It Works</h2>
   <ol>
-    <li>Click the button and pay $1 via Stripe</li>
-    <li>You’ll get a unique API key</li>
-    <li>Use it in your requests to generate PDF invoices</li>
+    <li>Click the payment button and pay $1 via Stripe</li>
+    <li>You’ll receive an API key</li>
+    <li>Use that key to generate invoices using a POST request</li>
   </ol>
 
-  <h2>🔧 Example API Call</h2>
+  <h2>📦 Sample API Request</h2>
   <div class="code-block">
 curl -X POST https://invoice-api-3.onrender.com/generate-invoice \
 -H "Content-Type: application/json" \
@@ -87,11 +97,12 @@ curl -X POST https://invoice-api-3.onrender.com/generate-invoice \
 }'
   </div>
 
-  <p>🎯 Your PDF will be available to download after calling the API.</p>
+  <p>🧾 Your PDF invoice will be generated and ready to download from the returned link.</p>
 </main>
 
 <footer>
-  &copy; 2025 Invoice API | Need help? Contact us at <a style="color:#4da8ff" href="mailto:you@example.com">you@example.com</a>
+  &copy; 2025 Invoice API — Powered by <strong>Mohamed Ait Benamara</strong><br>
+  💬 Need help? <a href="mailto:you@example.com">you@example.com</a>
 </footer>
 
 </body>
