@@ -2,108 +2,84 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Invoice API</title>
   <style>
     body {
-      font-family: Arial, sans-serif;
-      margin: 0; padding: 0;
-      background: #f8f9fa;
+      margin: 0;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: #f9f9f9;
       color: #333;
+      display: flex;
+      flex-direction: column;
+      min-height: 100vh;
     }
     header {
-      background: #1a1a1a;
+      background: #2c3e50;
       color: white;
+      padding: 1rem 2rem;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+    header h1 {
+      margin: 0;
+      font-size: 1.5rem;
+      display: flex;
+      align-items: center;
+    }
+    header img {
+      height: 40px;
+      margin-right: 10px;
+    }
+    main {
+      flex: 1;
       padding: 2rem;
       text-align: center;
     }
-    main {
-      padding: 2rem;
-      max-width: 800px;
-      margin: auto;
+    main h2 {
+      font-size: 2rem;
+      margin-bottom: 0.5rem;
     }
-    h1, h2 {
-      color: #222;
+    .powered {
+      font-size: 1rem;
+      color: #555;
+      margin-bottom: 2rem;
     }
     .btn {
-      background-color: #0d6efd;
+      background: #3498db;
       color: white;
       padding: 1rem 2rem;
-      text-decoration: none;
-      border-radius: 8px;
-      display: inline-block;
-      margin: 1.5rem 0;
+      border: none;
       font-size: 1rem;
+      cursor: pointer;
+      border-radius: 5px;
+      transition: background 0.3s ease;
+      text-decoration: none;
     }
     .btn:hover {
-      background-color: #0b5ed7;
-    }
-    .code-block {
-      background: #e9ecef;
-      padding: 1rem;
-      border-radius: 5px;
-      font-family: monospace;
-      white-space: pre-wrap;
-      overflow-x: auto;
+      background: #2980b9;
     }
     footer {
       text-align: center;
-      padding: 2rem;
-      background: #222;
-      color: white;
-      margin-top: 4rem;
-    }
-    a {
-      color: #4da8ff;
+      padding: 1rem;
+      background: #ecf0f1;
+      font-size: 0.9rem;
     }
   </style>
 </head>
 <body>
-
-<header>
-  <h1>📄 Invoice PDF API</h1>
-  <p>Create and download beautiful PDF invoices via a simple API</p>
-</header>
-
-<main>
-  <h2>💳 Get Access for Just $1</h2>
-  <p>Pay once and receive your own private API key to generate invoices instantly.</p>
-
-  <a class="btn" href="https://invoice-api-3.onrender.com/create-checkout-session">
-    Pay $1 and Get API Key
-  </a>
-
-  <h2>⚙️ How It Works</h2>
-  <ol>
-    <li>Click the payment button and pay $1 via Stripe</li>
-    <li>You’ll receive an API key</li>
-    <li>Use that key to generate invoices using a POST request</li>
-  </ol>
-
-  <h2>📦 Sample API Request</h2>
-  <div class="code-block">
-curl -X POST https://invoice-api-3.onrender.com/generate-invoice \
--H "Content-Type: application/json" \
--H "x-api-key: YOUR_API_KEY_HERE" \
--d '{
-  "invoice_number": "INV-001",
-  "client_name": "John Doe",
-  "client_email": "john@example.com",
-  "due_date": "2025-07-31",
-  "items": [
-    { "description": "Web Design", "quantity": 1, "unit_price": 200 },
-    { "description": "Hosting", "quantity": 1, "unit_price": 50 }
-  ]
-}'
-  </div>
-
-  <p>🧾 Your PDF invoice will be generated and ready to download from the returned link.</p>
-</main>
-
-<footer>
-  &copy; 2025 Invoice API — Powered by <strong>Mohamed Ait Benamara</strong><br>
-  💬 Need help? <a href="mailto:you@example.com">you@example.com</a>
-</footer>
-
+  <header>
+    <h1><img src="logo.png" alt="Logo"/> Invoice API</h1>
+  </header>
+  <main>
+    <h2>Invoice Generation API</h2>
+    <div class="powered">Powered by Mohamed Ait Benamara</div>
+    <p>Generate secure, professional PDF invoices through a simple REST API.</p>
+    <a href="https://github.com/medmomoait/invoice-api" class="btn" target="_blank">View on GitHub</a>
+  </main>
+  <footer>
+    &copy; 2025 Invoice API. All rights reserved.
+  </footer>
 </body>
 </html>
