@@ -20,6 +20,11 @@
       padding: 2rem;
       text-align: center;
     }
+    .powered {
+      font-size: 0.95rem;
+      color: #ccc;
+      margin-top: 0.5rem;
+    }
     main {
       padding: 2rem;
       max-width: 800px;
@@ -53,11 +58,6 @@
       overflow-x: auto;
       text-align: left;
     }
-    .powered {
-      font-size: 1rem;
-      color: #555;
-      margin-top: 0.5rem;
-    }
     footer {
       text-align: center;
       padding: 2rem;
@@ -87,6 +87,7 @@
 
 <header>
   <h1>📄 Invoice PDF API</h1>
+  <div class="powered">Powered by Mohamed Ait Benamara</div>
   <p>Create and download beautiful PDF invoices via a simple API</p>
 </header>
 
@@ -128,7 +129,7 @@ curl -X POST https://invoice-api-3.onrender.com/generate-invoice \
 </main>
 
 <footer>
-  &copy; 2025 Invoice API — Powered by <strong>Mohamed Ait Benamara</strong><br>
+  &copy; 2025 Invoice API<br>
   💬 Need help? <a href="mailto:you@example.com">you@example.com</a>
 </footer>
 
