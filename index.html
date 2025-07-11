@@ -10,9 +10,6 @@
       margin: 0; padding: 0;
       background: #f8f9fa;
       color: #333;
-      display: flex;
-      flex-direction: column;
-      min-height: 100vh;
     }
     header {
       background: #1a1a1a;
@@ -20,16 +17,26 @@
       padding: 2rem;
       text-align: center;
     }
-    .powered {
-      font-size: 0.95rem;
-      color: #ccc;
+    header h1 {
+      margin-bottom: 0.2rem;
+      color: #4da8ff;
+    }
+    .header-links {
       margin-top: 0.5rem;
+    }
+    .header-links a {
+      color: #f1f1f1;
+      text-decoration: none;
+      margin: 0 1rem;
+      font-weight: bold;
+    }
+    .header-links a:hover {
+      text-decoration: underline;
     }
     main {
       padding: 2rem;
       max-width: 800px;
       margin: auto;
-      flex: 1;
     }
     h2 {
       color: #222;
@@ -43,8 +50,6 @@
       display: inline-block;
       margin: 1.5rem 0;
       font-size: 1rem;
-      border: none;
-      cursor: pointer;
     }
     .btn:hover {
       background-color: #0b5ed7;
@@ -56,46 +61,35 @@
       font-family: monospace;
       white-space: pre-wrap;
       overflow-x: auto;
-      text-align: left;
     }
     footer {
       text-align: center;
       padding: 2rem;
       background: #222;
       color: white;
-      font-size: 0.9rem;
+      margin-top: 4rem;
     }
     a {
       color: #4da8ff;
     }
-    @media (max-width: 600px) {
-      .btn {
-        width: 100%;
-      }
-    }
   </style>
-  <script>
-    function copyCurl() {
-      const curl = document.getElementById("curl-code");
-      navigator.clipboard.writeText(curl.textContent).then(() => {
-        alert("📋 Copied to clipboard!");
-      });
-    }
-  </script>
 </head>
 <body>
 
 <header>
-  <h1 style="color: #0d6efd;">📄 Invoice PDF API</h1>
-  <div class="powered">Powered by Mohamed Ait Benamara</div>
+  <h1>📄 Invoice PDF API</h1>
   <p>Create and download beautiful PDF invoices via a simple API</p>
+  <div class="header-links">
+    <a href="https://invoice-api-3.onrender.com/create-checkout-session">💳 Buy Access</a>
+    <a href="https://invoice-api-3.onrender.com/docs">📘 Docs</a>
+  </div>
 </header>
 
 <main>
-  <h2>💳 Get Access for Just $1</h2>
-  <p>Pay once and receive your own private API key to generate invoices instantly.</p>
+  <h2>💵 Pay Once, Use Forever</h2>
+  <p>Pay $1 and receive your own private API key to generate invoices instantly.</p>
 
-  <a class="btn" href="https://invoice-api-3.onrender.com/create-checkout-session" target="_blank">
+  <a class="btn" href="https://invoice-api-3.onrender.com/create-checkout-session">
     Pay $1 and Get API Key
   </a>
 
@@ -107,7 +101,7 @@
   </ol>
 
   <h2>📦 Sample API Request</h2>
-  <div class="code-block" id="curl-code">
+  <div class="code-block">
 curl -X POST https://invoice-api-3.onrender.com/generate-invoice \
 -H "Content-Type: application/json" \
 -H "x-api-key: YOUR_API_KEY_HERE" \
@@ -123,14 +117,12 @@ curl -X POST https://invoice-api-3.onrender.com/generate-invoice \
 }'
   </div>
 
-  <button class="btn" onclick="copyCurl()">📋 Copy to Clipboard</button>
-
   <p>🧾 Your PDF invoice will be generated and ready to download from the returned link.</p>
 </main>
 
 <footer>
-  &copy; 2025 Invoice API<br>
-  💬 Need help? <a href="mailto:you@example.com">med.aitb01@gmail.com</a>
+  &copy; 2025 Invoice API — Powered by <strong>Mohamed Ait Benamara</strong><br>
+  💬 Need help? <a href="mailto:med.aitb01@gmail.com">med.aitb01@gmail.com</a>
 </footer>
 
 </body>
