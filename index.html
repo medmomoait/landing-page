@@ -18,20 +18,13 @@
       text-align: center;
     }
     header h1 {
-      margin-bottom: 0.2rem;
       color: #4da8ff;
+      margin-bottom: 0.5rem;
     }
-    .header-links {
-      margin-top: 0.5rem;
-    }
-    .header-links a {
-      color: #f1f1f1;
-      text-decoration: none;
-      margin: 0 1rem;
-      font-weight: bold;
-    }
-    .header-links a:hover {
-      text-decoration: underline;
+    .powered-by {
+      font-size: 0.9rem;
+      color: #ccc;
+      margin-top: -0.5rem;
     }
     main {
       padding: 2rem;
@@ -78,16 +71,13 @@
 
 <header>
   <h1>📄 Invoice PDF API</h1>
+  <p class="powered-by">Powered by <strong>Mohamed Ait Benamara</strong></p>
   <p>Create and download beautiful PDF invoices via a simple API</p>
-  <div class="header-links">
-    <a href="https://invoice-api-3.onrender.com/create-checkout-session">💳 Buy Access</a>
-    <a href="https://invoice-api-3.onrender.com/docs">📘 Docs</a>
-  </div>
 </header>
 
 <main>
-  <h2>💵 Pay Once, Use Forever</h2>
-  <p>Pay $1 and receive your own private API key to generate invoices instantly.</p>
+  <h2>💳 Get Access for Just $1</h2>
+  <p>Pay once and receive your own private API key to generate invoices instantly.</p>
 
   <a class="btn" href="https://invoice-api-3.onrender.com/create-checkout-session">
     Pay $1 and Get API Key
@@ -121,7 +111,7 @@ curl -X POST https://invoice-api-3.onrender.com/generate-invoice \
 </main>
 
 <footer>
-  &copy; 2025 Invoice API — Powered by <strong>Mohamed Ait Benamara</strong><br>
+  &copy; 2025 Invoice API<br>
   💬 Need help? <a href="mailto:med.aitb01@gmail.com">med.aitb01@gmail.com</a>
 </footer>
 
